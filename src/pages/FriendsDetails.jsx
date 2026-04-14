@@ -23,13 +23,18 @@ const FriendsDetails = () => {
   }
   const { picture, name, status, next_due_date, goal, days_since_contact, bio } = expectedFriend;
 
-  const handleTimeline = () => {
-    setTimelineText([...timelineText, expectedFriend]);
+  const handleTimeline = (type) => {
+    const newEntry = {
+      ...expectedFriend,
+      interactionType: type,
+      date: new Date().toISOString()
+    };
+    setTimelineText(prev =>[...prev,newEntry]);
     console.log(timelineText,'timeline');
   }
   return (
    
-   <div className="grid grid-cols-1 md:grid-cols-12 gap-6 p-6 bg-gray-50 min-h-screen">
+   <div className="grid grid-cols-1 md:grid-cols-12  gap-6 p-6 bg-gray-50 min-h-screen">
       
       {/* --- Left Sidebar Section (Takes 3 columns) --- */}
       <div className="md:col-span-3 space-y-6">
@@ -60,10 +65,10 @@ const FriendsDetails = () => {
       </div>
 
       {/* --- Right Main Content (Takes 9 columns) --- */}
-      <div className="md:col-span-9 space-y-6">
+      <div className="md:col-span-8 lg:col-span-9 space-y-4 md:space-y-6">
         
         {/* Top Stats: 3 columns grid within main grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           <div className="bg-white p-6 rounded-2xl shadow-sm text-center border border-gray-100">
             <p className="text-3xl font-bold text-gray-800">{days_since_contact}</p>
             <p className="text-gray-400 text-sm">Days Since Contact</p>
@@ -91,9 +96,9 @@ const FriendsDetails = () => {
         <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
           <h3 className="font-bold text-green-900 mb-4">Quick Check-In</h3>
           <div className="grid grid-cols-3 gap-4 text-center">
-            <button onClick={handleTimeline} className="p-4 bg-[#CBFADB] rounded-xl hover:bg-base-300 py-8 cursor-pointer"><TbPhoneCall className='mx-auto'/>Call</button>
-            <button className="p-4 bg-[#CBFADB] rounded-xl hover:bg-base-200 py-8 cursor-pointer"><IoIosText className='mx-auto' />Text</button>
-            <button className="p-4 bg-[#CBFADB] rounded-xl  py-8 hover:bg-base-200 flex flex-col cursor-pointer"><HiMiniVideoCamera className='mx-auto'/>Video</button>
+            <button onClick={() => handleTimeline('call')} className="p-4 bg-[#CBFADB] rounded-xl hover:bg-base-300 py-8 cursor-pointer"><TbPhoneCall className='mx-auto'/>Call</button>
+            <button  onClick={() => handleTimeline('text')}  className="p-4 bg-[#CBFADB] rounded-xl hover:bg-base-200 py-8 cursor-pointer"><IoIosText className='mx-auto' />Text</button>
+            <button  onClick={() => handleTimeline('video')}  className="p-4 bg-[#CBFADB] rounded-xl  py-8 hover:bg-base-200 flex flex-col cursor-pointer"><HiMiniVideoCamera className='mx-auto'/>Video</button>
           </div>
         </div>
 
