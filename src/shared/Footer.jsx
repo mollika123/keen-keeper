@@ -5,7 +5,7 @@ import { SlSocialInstagram } from 'react-icons/sl';
 
 const Footer = () => {
   return (
-    <footer className=" bg-[#244D3F] text-primary-content p-10">
+    <footer className=" bg-[#244D3F] text-primary-content py-20 p-10">
   <aside className='text-center space-y-6'>
     
     <h1 className="font-bold text-5xl text-white">
@@ -33,8 +33,8 @@ const Footer = () => {
 
                             </div>
         </div>
-            <hr className='my-8 bg-gray-600' />
-      <div className='flex justify-between'>
+            <hr className='my-8 border-gray-50' />
+      <div className='flex justify-between text-gray-200'>
         <p>© 2026 KeenKeeper. All rights reserved.</p>
         <div className='flex gap-4'>
           <p>Privacy Policy              </p>
