@@ -10,6 +10,7 @@ import TimeLine from './pages/TimeLine';
 import Stats from './pages/Stats';
 import Friends from './pages/Friends';
 import FriendsDetails from './pages/FriendsDetails';
+import TimelineTextProvider from './context/timelineTextContext';
 
 const router = createBrowserRouter([
   {
@@ -43,6 +44,7 @@ element:<Home></Home>
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />,
+    <TimelineTextProvider>    <RouterProvider router={router} /></TimelineTextProvider>
+,
   </StrictMode>,
 )

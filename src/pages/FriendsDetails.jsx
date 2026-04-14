@@ -1,11 +1,17 @@
-import React from 'react';
-import { useParams } from 'react-router';
+import React, { useContext, useState } from 'react';
+import { Link, useParams } from 'react-router';
 import useFriends from '../hooks/useFriends';
+import { TbPhoneCall } from 'react-icons/tb';
+import { IoIosText } from 'react-icons/io';
+import { HiMiniVideoCamera } from 'react-icons/hi2';
+import { TimelineTextContext } from '../context/timelineTextContext';
 
 const FriendsDetails = () => {
    const { id } = useParams();
   console.log(id);
   const { friends, loading } = useFriends();
+ 
+  const{timelineText,setTimelineText}=useContext(TimelineTextContext)
   const expectedFriend = friends.find(friend => String(friend.id) === id);
   console.log(friends, loading,expectedFriend);
  
@@ -15,7 +21,12 @@ const FriendsDetails = () => {
   if (!expectedFriend) {
     return <h2 className="text-center mt-10 text-2xl text-red-500">Friend Not Found!</h2>;
   }
-   const { picture, name, status, next_due_date, goal, days_since_contact, bio } = expectedFriend;
+  const { picture, name, status, next_due_date, goal, days_since_contact, bio } = expectedFriend;
+
+  const handleTimeline = () => {
+    setTimelineText([...timelineText, expectedFriend]);
+    console.log(timelineText,'timeline');
+  }
   return (
    
    <div className="grid grid-cols-1 md:grid-cols-12 gap-6 p-6 bg-gray-50 min-h-screen">
@@ -80,9 +91,9 @@ const FriendsDetails = () => {
         <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
           <h3 className="font-bold text-green-900 mb-4">Quick Check-In</h3>
           <div className="grid grid-cols-3 gap-4 text-center">
-            <div className="p-4 bg-gray-50 rounded-xl hover:bg-green-50 cursor-pointer">📞<br/>Call</div>
-            <div className="p-4 bg-gray-50 rounded-xl hover:bg-green-50 cursor-pointer">💬<br/>Text</div>
-            <div className="p-4 bg-gray-50 rounded-xl hover:bg-green-50 cursor-pointer">📹<br/>Video</div>
+            <button onClick={handleTimeline} className="p-4 bg-[#CBFADB] rounded-xl hover:bg-base-300 py-8 cursor-pointer"><TbPhoneCall className='mx-auto'/>Call</button>
+            <button className="p-4 bg-[#CBFADB] rounded-xl hover:bg-base-200 py-8 cursor-pointer"><IoIosText className='mx-auto' />Text</button>
+            <button className="p-4 bg-[#CBFADB] rounded-xl  py-8 hover:bg-base-200 flex flex-col cursor-pointer"><HiMiniVideoCamera className='mx-auto'/>Video</button>
           </div>
         </div>
 

@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { TimelineTextContext } from '../context/timelineTextContext';
 
 const TimeLine = () => {
+  const {timelineText,setTimelineText} = useContext(TimelineTextContext);
+  console.log(timelineText,setTimelineText);
   return (
     <div>
-      timeline
+      {
+        timelineText.map((text, index) => {
+          return <div></div>
+        })
+     }
     </div>
   );
 };
