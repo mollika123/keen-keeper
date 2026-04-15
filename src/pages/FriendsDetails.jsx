@@ -5,6 +5,8 @@ import { TbPhoneCall } from 'react-icons/tb';
 import { IoIosText } from 'react-icons/io';
 import { HiMiniVideoCamera } from 'react-icons/hi2';
 import { TimelineTextContext } from '../context/timelineTextContext';
+import { toast } from 'react-toastify';
+import { RotatingLines } from 'react-loader-spinner';
 
 const FriendsDetails = () => {
    const { id } = useParams();
@@ -16,7 +18,7 @@ const FriendsDetails = () => {
   console.log(friends, loading,expectedFriend);
  
   if (loading) {
-    return <h2>Loading---</h2>
+    return  (<div className='flex justify-center items-center'><RotatingLines></RotatingLines></div>)
   }
   if (!expectedFriend) {
     return <h2 className="text-center mt-10 text-2xl text-red-500">Friend Not Found!</h2>;
@@ -24,13 +26,39 @@ const FriendsDetails = () => {
   const { picture, name, status, next_due_date, goal, days_since_contact, bio } = expectedFriend;
 
   const handleTimeline = (type) => {
+    const isDuplicate = timelineText.some(
+    (item) => item.id === expectedFriend.id && item.interactionType === type
+  );
+
+  if (isDuplicate) {
+    toast.error(`Already added a ${type} for ${name}!`, {
+      position: "top-right"
+    });
+    return;
+  }
     const newEntry = {
       ...expectedFriend,
       interactionType: type,
       date: new Date().toISOString()
     };
     setTimelineText(prev =>[...prev,newEntry]);
-    console.log(timelineText,'timeline');
+    console.log(timelineText, 'timeline');
+   if (type === 'call') {
+    toast.info(`📞 Call with ${name} added!`, {
+      position: "top-right",
+      autoClose: 2000,
+    });
+  } else if (type === 'text') {
+    toast.success(`💬 Text message for ${name} recorded!`, {
+      position: "top-right",
+      autoClose: 2000,
+    });
+  } else if (type === 'video') {
+    toast.warning(`🎥 Video call with ${name} added to history!`, {
+      position: "top-right",
+      autoClose: 2000,
+    });
+  }
   }
   return (
    
@@ -96,7 +124,7 @@ const FriendsDetails = () => {
         <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
           <h3 className="font-bold text-green-900 mb-4">Quick Check-In</h3>
           <div className="grid grid-cols-3 gap-4 text-center">
-            <button onClick={() => handleTimeline('call')} className="p-4 bg-[#CBFADB] rounded-xl hover:bg-base-300 py-8 cursor-pointer"><TbPhoneCall className='mx-auto'/>Call</button>
+            <button  onClick={() => handleTimeline('call')} className="p-4 bg-[#CBFADB] rounded-xl hover:bg-base-300 py-8 cursor-pointer"><TbPhoneCall className='mx-auto'/>Call</button>
             <button  onClick={() => handleTimeline('text')}  className="p-4 bg-[#CBFADB] rounded-xl hover:bg-base-200 py-8 cursor-pointer"><IoIosText className='mx-auto' />Text</button>
             <button  onClick={() => handleTimeline('video')}  className="p-4 bg-[#CBFADB] rounded-xl  py-8 hover:bg-base-200 flex flex-col cursor-pointer"><HiMiniVideoCamera className='mx-auto'/>Video</button>
           </div>
