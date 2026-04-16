@@ -16,7 +16,7 @@ Quick Stats: At-a-glance cards showing "Days Since Contact" and "Goal Days" to k
 🔔 Real-time Feedback
 Smart Notifications: Beautifully styled toasts (React-Toastify) that give feedback for every action (e.g., info for calls, success for texts).
 
-🛠️ Tech Stack
+<h1>🛠️ Tech Stack</h1>
 Frontend: React.js
 
 Styling: Tailwind CSS
