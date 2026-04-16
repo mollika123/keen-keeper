@@ -19,7 +19,7 @@ const Stats = () => {
   ].filter(item => item.value > 0);
 
   // কালার ডিফাইন করা
-  const COLORS = ['#3b82f6', '#22c55e', '#a855f7'];
+  const COLORS = ['#244D3F',  '#a855f7', '#22c55e'];
 
   return (
     <div className='container mx-auto py-10 px-4'>

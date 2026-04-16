@@ -9,7 +9,7 @@ const Friends = () => {
     <div className='container mx-auto py-20'>
       <h1 className='text-5xl font-bold my-6'>Your Friends</h1>
       {
-        loading ? (<div className='flex justify-center items-center'><RotatingLines></RotatingLines></div>) : (<div className='grid md:grid-cols-3 lg:grid-cols-4 gap-3'>{friends.map((friend,index)=><FriendsCard key={index}friend={friend}></FriendsCard>) }</div>)
+        loading ? (<div className='flex justify-center items-center'><RotatingLines></RotatingLines></div>) : (<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3'>{friends.map((friend,index)=><FriendsCard key={index}friend={friend}></FriendsCard>) }</div>)
      }
     </div>
   );

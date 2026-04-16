@@ -3,7 +3,7 @@ import React from 'react';
 const Feature = () => {
   return (
     <div className='container mx-auto py-8'>
-      <div className='grid md:grid-cols-3 lg:grid-cols-4 gap-4 card '>
+      <div className='grid md:grid-cols-1 lg:grid-cols-4 gap-4 card '>
         <div className='bg-white p-8 text-center rounded-md shadow-md'><h2 className=' text-3xl font-bold'>10</h2>
         <p className='text-[#64748B]     text-2xl'>Total Friends</p></div>
         <div className='bg-white p-8 text-center rounded-md shadow-md'><h2 className=' text-3xl font-bold'>3</h2>

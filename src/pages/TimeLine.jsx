@@ -20,7 +20,7 @@ const filteredTimeline = timelineText.filter((item) => {
       {/* Dropdown Filter */}
       <div className="mb-8">
         <label htmlFor="filter" placeholder= "Filter Timeline" className="block text-sm   font-medium text-gray-700 mb-2">
-          Filter by Type:
+         
         </label>
         <select
           id="filter"
