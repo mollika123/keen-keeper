@@ -27,6 +27,12 @@ Routing: React Router
 
 Animations/Loaders: React Loader Spinner
 
+## ✨ Features
+
+- [x] **Scalable Architecture**: Handles millions of daily active users (DAU) effortlessly.
+- [x] **User-friendly UI**: Clean, modern, and responsive dashboard design.
+- [x] **Automated Reporting**: Generates weekly performance reports in PDF/CSV formats.
+
 ### 🚀 Frameworks & Libraries
 
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
