@@ -2,19 +2,13 @@
 <h1>Name of the Project:Keen Keeper</h1>
 <h1>Live Demo:https://transcendent-granita-bb1616.netlify.app/</h1>
 
-Description:This website is a Personal Relationship Manager (PRM) designed to help you stay connected with the people who matter most. It acts as a digital bridge between you and your inner circle, ensuring that no friendship or family bond fades due to a busy
-
-Eita ekta professional README.md file tomar project-er jonno. Tumi eita copy kore tomar GitHub ba project-er root directory-te  name save korte paro.README.md
+Description:This website is a Personal Relationship Manager (PRM) designed to help you stay connected with the people who matter most. It acts as a digital bridge between you and your inner circle, ensuring that no friendship or family bond fades due to a busy.
 
 
 
-📊 Friendship Analytics
-Visual Data: Interactive Pie Charts (powered by Recharts) that show the breakdown of your communication habits.
 
-Quick Stats: At-a-glance cards showing "Days Since Contact" and "Goal Days" to keep you accountable.
 
-🔔 Real-time Feedback
-Smart Notifications: Beautifully styled toasts (React-Toastify) that give feedback for every action (e.g., info for calls, success for texts).
+
 
 <h1>🛠️ Tech Stack</h1>
 Frontend: React.js
