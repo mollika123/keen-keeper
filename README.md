@@ -3,12 +3,34 @@
 
 Description:This website is a Personal Relationship Manager (PRM) designed to help you stay connected with the people who matter most. It acts as a digital bridge between you and your inner circle, ensuring that no friendship or family bond fades due to a busy
 
+Eita ekta professional README.md file tomar project-er jonno. Tumi eita copy kore tomar GitHub ba project-er root directory-te  name save korte paro.README.md
 
-Technologies:
-### 💻 Programming Languages
 
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-<!-- TODO: Add/remove languages based on your actual skills -->
+
+📊 Friendship Analytics
+Visual Data: Interactive Pie Charts (powered by Recharts) that show the breakdown of your communication habits.
+
+Quick Stats: At-a-glance cards showing "Days Since Contact" and "Goal Days" to keep you accountable.
+
+🔔 Real-time Feedback
+Smart Notifications: Beautifully styled toasts (React-Toastify) that give feedback for every action (e.g., info for calls, success for texts).
+
+🛠️ Tech Stack
+Frontend: React.js
+
+Styling: Tailwind CSS
+
+Icons: React Icons
+
+Charts: Recharts
+
+Notifications: React-Toastify
+
+State Management: React Context API
+
+Routing: React Router
+
+Animations/Loaders: React Loader Spinner
 
 ### 🚀 Frameworks & Libraries
 
