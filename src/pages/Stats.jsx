@@ -23,7 +23,9 @@ const Stats = () => {
 
   return (
     <div className='container mx-auto py-10 px-4'>
-      <h1 className='text-5xl font-bold py-8 text-center text-[#244D3F]'>Friendship Analytics</h1>
+      <h1 className='text-5xl font-bold py-8  text-[#244D3F]'>Friendship Analytics</h1>
+
+      <h2 className='text-gray-400 font-semibold my-8'>By Interaction Type</h2>
 
       {timelineText.length === 0 ? (
         <p className="text-center text-gray-400 text-2xl py-20">No data available to display chart.</p>

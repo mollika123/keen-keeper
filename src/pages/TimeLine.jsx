@@ -19,7 +19,7 @@ const filteredTimeline = timelineText.filter((item) => {
       {/* dropdown */}
       {/* Dropdown Filter */}
       <div className="mb-8">
-        <label htmlFor="filter" className="block text-sm font-medium text-gray-700 mb-2">
+        <label htmlFor="filter" placeholder= "Filter Timeline" className="block text-sm   font-medium text-gray-700 mb-2">
           Filter by Type:
         </label>
         <select
@@ -28,7 +28,7 @@ const filteredTimeline = timelineText.filter((item) => {
           onChange={(e) => setFilterType(e.target.value)}
           className="w-[200px] border rounded-lg px-4 py-2 outline-none focus:ring-2 focus:ring-green-300 bg-white cursor-pointer shadow-sm"
         >
-          <option value="all">All Interactions</option>
+          <option value="all">Filter Timeline</option>
           <option value="call">Calls</option>
           <option value="text">Texts</option>
           <option value="video">Videos</option>
