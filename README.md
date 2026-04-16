@@ -43,6 +43,3 @@ Animations/Loaders: React Loader Spinner
 
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)![NPM](https://img.shields.io/badge/NPM-CB3837?style=for-the-badge&logo=npm&logoColor=white)<!-- TODO: Add your cloud/devops tools -->
 
-### 🗄️ Databases & APIs
-
-![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)![REST API](https://img.shields.io/badge/REST%20API-00599C?style=for-the-badge&logo=dot-net&logoColor=white)<!-- TODO: Add your databases and API knowledge -->
