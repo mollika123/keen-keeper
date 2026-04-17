@@ -1,6 +1,6 @@
 
 <h1>Name of the Project:Keen Keeper</h1>
-<h1>Live Demo:keen-keeper-app.surge.sh</h1>
+
 
 Description:This website is a Personal Relationship Manager (PRM) designed to help you stay connected with the people who matter most. It acts as a digital bridge between you and your inner circle, ensuring that no friendship or family bond fades due to a busy.
 
